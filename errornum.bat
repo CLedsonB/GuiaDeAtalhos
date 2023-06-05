@@ -1,10 +1,10 @@
+@echo off
 echo ---CONFIGs INICIAIS--- 
-echo off
 chcp 65001
 title [ ERROR 02 ]
 goto INICIO 
   
----------------------------------------------
+__________________________________________
 
 :INICIO 
 mode con:cols=30 lines=15
