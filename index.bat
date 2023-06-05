@@ -4,6 +4,9 @@ if "%1" neq "" goto %1
 chcp 65001
 title Central De Atalhos
 setlocal
+goto INICIO
+
+__________________________________________
 
 :INICIO
 mode con:cols=50 lines=30
@@ -31,5 +34,3 @@ if %opc% equ 4 goto start youtube.bat
 
 if %opc% gtr 4 goto start errornum.bat
 if %opc% lss 1 goto start errornum.bat
-
---------------------------------------------
