@@ -2,7 +2,18 @@ echo ---CONFIGs INICIAIS---
 echo off
 chcp 65001
 title Atalhos Jobs
-goto INICIO 
+
+setlocal
+
+set "Ecld = cledsonborgesdossantos@gmail.com"
+set "Eedz = edzzon2@gmail.com"
+set "Sn = 34012348"
+set "Sns = 34012348@!"
+set "Snsl = 34012348@!a"
+set "Snls = 34012348a@!"
+
+goto INICIO
+
   
 --------------------------------------------- 
   
@@ -59,8 +70,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : edzzon2@gmail.com
-echo.    senha : 34012348@!
+echo.    email : %Eedz%
+echo.    senha : %Sns%
 pause
 goto P2
  
@@ -73,8 +84,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : edzzon2@gmail.com
-echo.    senha : 34012348
+echo.    email : %Eedz%
+echo.    senha : %Sn%
 echo.
 echo.  obs: atualizar curriculo
 pause
@@ -89,8 +100,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : edzzon2@gmail.com 
-echo.    senha : 34012348@!
+echo.    email : %Eedz%
+echo.    senha : %Sns%
 echo.
 echo.    obs : atualizar curriculo
 pause
@@ -105,8 +116,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com
-echo.    senha : 34012348@!
+echo.    email : %Ecld%
+echo.    senha : %Sns%
 pause
 goto P2
  
@@ -119,8 +130,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com 
-echo.    senha : 34012348@!a
+echo.    email : %Ecld%
+echo.    senha : %Snsl%
 pause
 goto P2
  
@@ -133,7 +144,7 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com
+echo.    email : %Ecld%
 echo.    senha :  
 pause
 goto P2
@@ -147,8 +158,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : edzzon2@gmail.com
-echo.    senha : 34012348@!
+echo.    email : %Eedz%
+echo.    senha : %Sns%
 pause
 goto P2
  
@@ -190,7 +201,7 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com
+echo.    email : %Ecld%
 echo.    senha :  
 pause
 goto P2
@@ -220,7 +231,7 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com
+echo.    email : %Ecld%
 echo.    senha : 34012348@!
 pause
 goto P2
@@ -234,7 +245,7 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : edzzon2@gmail.com 
+echo.    email : %Eedz%
 echo.    senha : 34012348@!a
 pause
 goto P2
