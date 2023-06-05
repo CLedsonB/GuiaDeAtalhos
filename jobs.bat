@@ -1,7 +1,7 @@
 @echo off
-echo ---CONFIGs INICIAIS---
-chcp 65001
+echo ___CONFIGs INICIAIS___
 if "%1" neq "" goto %1
+chcp 65001
 title Atalhos Jobs
 setlocal
 
@@ -11,15 +11,16 @@ set "Sn=34012348"
 set "Sns=34012348@!"
 set "Snsl=34012348@!a"
 set "Snls=34012348a@!"
-
 goto INICIO
+
+__________________________________________
 
 :INICIO
 mode con:cols=50 lines=30
 color 02
 cls
 echo.
-echo         ___ SITES ESTÁGIOS / JOBS ___
+echo         ___ SITES ESTÁGIOS _ JOBS ___
 echo.
 echo.
 echo.
@@ -39,7 +40,7 @@ echo.        11 - BAHIAESTAGIO
 echo.        12 - BNE
 echo.        13 - COELBA
 echo.
-set /p opc=. : 
+set /p opc=Insira um valor:
 
 if %opc% == 1 goto INFOJOBS
 if %opc% == 2 goto INDEED
@@ -55,8 +56,10 @@ if %opc% == 11 goto BAHIAESTAGIO
 if %opc% == 12 goto BNE
 if %opc% == 13 goto COELBA
  
-if %opc% gtr 13 goto cmd_start_errornum.bat
-if %opc% lss 1 goto cmd_start_errornum.bat
+if %opc% gtr 13 goto start errornum.bat
+if %opc% lss 1 goto start errornum.bat
+
+__________________________________________
 
 :INFOJOBS
 color 17
@@ -69,6 +72,8 @@ echo.    email : %Eedz%
 echo.    senha : %Sns%
 pause
 goto P2
+
+__________________________________________
 
 :INDEED
 color 71
@@ -84,6 +89,8 @@ echo.  obs: atualizar curriculo
 pause
 goto P2
 
+__________________________________________
+
 :GLASSDOOR
 color 21
 start chrome --incognito "https://www.glassdoor.com.br/" 
@@ -98,6 +105,8 @@ echo.    obs : atualizar curriculo
 pause
 goto P2
 
+__________________________________________
+
 :LINKEDIN
 color 12
 start chrome --incognito "https://www.linkedin.com/" 
@@ -110,6 +119,8 @@ echo.    senha : %Sns%
 pause
 goto P2
 
+__________________________________________
+
 :NUBE
 color 70
 start chrome --incognito "https://www.nube.com.br/login/login_geral" 
@@ -121,6 +132,7 @@ echo.    email : %Ecld%
 echo.    senha : %Snsl%
 pause
 goto P2
+__________________________________________
 
 :OLX
 color 5a
@@ -133,6 +145,7 @@ echo.    email : %Ecld%
 echo.    senha :  
 pause
 goto P2
+__________________________________________
 
 :99FREELAS
 color 97
@@ -145,6 +158,8 @@ echo.    email : %Eedz%
 echo.    senha : %Sns%
 pause
 goto P2
+
+__________________________________________
 
 :UPWORK
 color 7a
@@ -159,6 +174,8 @@ echo.    palavra-chave : calhambeque
 pause
 goto P2
 
+__________________________________________
+
 :IEL
 color 14
 start chrome --incognito "https://sis.fieb.org.br/iel/sge_estudante/Default.aspx" 
@@ -171,6 +188,8 @@ echo.    senha : 34012348
 pause
 goto P2
 
+__________________________________________
+
 :VAGAS
 color af
 start chrome --incognito "https://www.vagas.com.br/login-candidatos" 
@@ -182,6 +201,8 @@ echo.    email : %Ecld%
 echo.    senha :  
 pause
 goto P2
+
+__________________________________________
 
 :BAHIAESTAGIO
 color f2
@@ -197,6 +218,8 @@ echo.    obs : Criar conta
 pause
 goto P2
 
+__________________________________________
+
 :BNE
 color f2
 start chrome --incognito "https://id-pf-sts.bne.com.br/RegisterSimplified?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dbne_web%26redirect_uri%3Dhttps%253A%252F%252Floginpf.bne.com.br%252Fsignin-oidc%26response_type%3Dcode%2520id_token%26scope%3Dopenid%2520profile%2520email%2520phone_number%2520cpf%2520birthdate%2520vagas_core_api%2520curriculo_api%26response_mode%3Dform_post%26nonce%3D638215247301923762.NDg3OTAyODItN2NmOC00ZWI3LTk3MzktMzk0Njk0YzEyOTE3MjkzZTM3ZTAtNTQyNy00YzRkLWJmY2ItZDkyYTQ1NzU4M2Ey%26state%3DCfDJ8GtrDqhMfmBPqBN448fOdl5rBzlgpxtesZKrG_Oe7yYpMUyAcT5wNuwUf1SdPTa0Hbnk_l557BhDg0wkpudCkec9R6-tSAEbbSzXkKbo-c-EtuSaUIe7198Y4ao9pB7HIs6KwSoevYpzIDicJmsboFh-_elXRLanL9ZgwYsnY6RbtIQF0T9QCZm2tERmwmi3uI18VSi9B1HZ0Xob_ELOh3sn9Eexe2Y9_l5c1a_dgTabnZLNGiB5NH7lH2OXWP8-VZMrJLVx_nDoljyNpsLzIhrh1kwswoulh92mpIdwmdOMqQDQNEwoXKwi-uvbWRTGDrya3wgLgQvGdvZuIWUVEeTVT4sBd78yvTmupFMRvltA%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D5.5.0.0" 
@@ -209,6 +232,8 @@ echo.    senha : 34012348@!
 pause
 goto P2
 
+__________________________________________
+
 :COELBA
 color f2
 start chrome --incognito "https://servicos.neoenergiacoelba.com.br/area-logada/Paginas/login.aspx" 
@@ -220,6 +245,8 @@ echo.    email : %Eedz%
 echo.    senha : 34012348@!a
 pause
 goto P2
+
+__________________________________________
 
 :P2 
 mode con:cols=50 lines=10 
@@ -238,6 +265,8 @@ cls
 if %opc% == 1 goto cmd index.html && exit
 if %opc% == 2 goto INICIO
 if %opc% == 3 goto FIM
+
+__________________________________________
 
 :FIM
 exit
