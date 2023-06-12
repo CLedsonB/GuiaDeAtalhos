@@ -31,7 +31,7 @@ if "%opc%" equ "1" start pessoais.bat
 if "%opc%" equ "2" start jobs.bat
 if "%opc%" equ "3" start cursos.bat
 if "%opc%" equ "4" start youtube.bat
-if "%opc%" equ "109" start bug01.bat
+if "%opc%" equ "109" start bug109.bat
 
 if "%opc%" gtr "4" start errornum.bat && timeout 3 && start index.bat
 if "%opc%" lss "1" start errornum.bat && timeout 3 && start index.bat
