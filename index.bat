@@ -1,9 +1,20 @@
 @echo off
 echo --- CONFIGs INICIAIS ---
-if "%1" neq "" goto %1
 chcp 65001
 title Central De Atalhos
 setlocal
+
+set "Ecld=emailpessoal@gmail.com"
+set "Eedz=bacdefghi@gmail.com"
+set "Eifba=929580203905@ifba.edu.br"
+set "Sn=934-53"
+set "Sns=80753lks"
+set "Snsl=jdhsg234"
+set "Snls=25971absc"
+set "Sifba=SENHAnvalor"
+set "Sm=senhaABC%"
+set "SM=senha1234"
+
 goto INICIO
 
 __________________________________________
@@ -27,11 +38,11 @@ echo.
 set /p opc=.	Insira um valor : 
 cls
 
-if "%opc%" equ "1" start pessoais.bat
-if "%opc%" equ "2" start jobs.bat
-if "%opc%" equ "3" start cursos.bat
-if "%opc%" equ "4" start youtube.bat
-if "%opc%" equ "109" start bug109.bat
+if %opc% equ 1 call pessoais.bat %Ecld% %Eedz% %Eifba% %Sn% %Sns% %Snsl% %Snls% %Sifba% %Sm% %SM%
+if %opc% equ 2 call jobs.bat %Ecld% %Eedz% %Eifba% %Sn% %Sns% %Snsl% %Snls% %Sifba% %Sm% %SM%
+if %opc% equ 3 call cursos.bat %Ecld% %Eedz% %Eifba% %Sn% %Sns% %Snsl% %Snls% %Sifba% %Sm% %SM%
+if %opc% equ 4 start youtube.bat
+if %opc% equ 109 start bug109.bat
 
-if "%opc%" gtr "4" start errornum.bat && timeout 3 && start index.bat
-if "%opc%" lss "1" start errornum.bat && timeout 3 && start index.bat
+if %opc% gtr 4 start errornum.bat && timeout 3 && start index.bat
+if %opc% lss 1 start errornum.bat && timeout 3 && start index.bat
