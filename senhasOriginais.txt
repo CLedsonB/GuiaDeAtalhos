@@ -1,0 +1,11 @@
+set "Ecld=cledsonborgesdossantos@gmail.com"
+set "Eedz=edzzon2@gmail.com"
+set "Eifba=20190028012@ifba.edu.br"
+set "Sn=34012348"
+set "Sns=34012348@!"
+set "Snsl=34012348@!a"
+set "Snls=34012348a@!"
+set "Sifba=ifba.85932145501"
+set "Sm=Ma@v6lne$%"
+set "SM=MA@V6LNE$%"
+
