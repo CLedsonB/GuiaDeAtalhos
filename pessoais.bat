@@ -1,10 +1,21 @@
 @echo off
 echo --- CONFIGs INICIAIS --- 
-if "%1" neq "" goto %1
 chcp 65001
 title Atalhos Pessoais
+setlocal
+set Ecld = %1
+set Eedz = %2
+set Eifba = %3
+set Sn = %4
+set Sns = %5
+set Snsl = %6
+set Snls = %7
+set Sifba = %8
+set Sm = %9
+set SM = %10
+
 goto INICIO 
-  
+
 __________________________________________
 
 :INICIO 
@@ -52,11 +63,11 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com
-echo.    senha : 34012348@!
+echo.    email : %Ecld%
+echo.    senha : %Sns%
 echo.
-echo.    email : 20190028012@ifba.edu.br
-echo.    senha : ifba.85932145501
+echo.    email : %Eifba%
+echo.    senha : %Sifba%
 echo.
 pause
 goto P2 
@@ -70,8 +81,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com 
-echo.    senha : MA@V6LNE$%
+echo.    email : %Ecld% 
+echo.    senha : %SM%
 echo.
 pause
 goto P2 
@@ -86,8 +97,8 @@ echo.
 echo.    CREDENCIAIS
 echo.
 echo.    nome de usuário : CLedsonB
-echo.    email : edzzon2@gmail.com 
-echo.    senha : Ma@v6lne$%
+echo.    email : %Eedz% 
+echo.    senha : %Sm%
 echo.
 pause
 goto P2 
@@ -101,8 +112,8 @@ cls
 echo.
 echo.    CREDENCIAIS
 echo.
-echo.    email : cledsonborgesdossantos@gmail.com
-echo.    senha : 34012348@!
+echo.    email : %Ecld%
+echo.    senha : %Sns%
 echo.
 pause
 goto P2 
