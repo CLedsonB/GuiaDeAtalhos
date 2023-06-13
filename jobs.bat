@@ -1,16 +1,19 @@
 @echo off
 echo --- CONFIGs INICIAIS ---
-if "%1" neq "" goto %1
 chcp 65001
 title Atalhos Jobs
-setlocal
 
-set "Ecld=cledsonborgesdossantos@gmail.com"
-set "Eedz=edzzon2@gmail.com"
-set "Sn=34012348"
-set "Sns=34012348@!"
-set "Snsl=34012348@!a"
-set "Snls=34012348a@!"
+set Ecld = %1
+set Eedz = %2
+set Eifba = %3
+set Sn = %4
+set Sns = %5
+set Snsl = %6
+set Snls = %7
+set Sifba = %8
+set Sm = %9
+set SM = %10
+
 goto INICIO
 
 __________________________________________
@@ -45,22 +48,22 @@ set /p opc=.	Insira um valor :
 mode con:cols=50 lines=15
 cls
 
-if "%opc%" equ "1" goto INFOJOBS
-if "%opc%" equ "2" goto INDEED
-if "%opc%" equ "3" goto GLASSDOOR
-if "%opc%" equ "4" goto LINKEDIN
-if "%opc%" equ "5" goto NUBE
-if "%opc%" equ "6" goto OLX
-if "%opc%" equ "7" goto FREELAS
-if "%opc%" equ "8" goto UPWORK
-if "%opc%" equ "9" goto IEL
-if "%opc%" equ "10" goto VAGAS
-if "%opc%" equ "11" goto BAHIAESTAGIO
-if "%opc%" equ "12" goto BNE
-if "%opc%" equ "13" goto COELBA
+if %opc% equ 1 goto INFOJOBS
+if %opc% equ 2 goto INDEED
+if %opc% equ 3 goto GLASSDOOR
+if %opc% equ 4 goto LINKEDIN
+if %opc% equ 5 goto NUBE
+if %opc% equ 6 goto OLX
+if %opc% equ 7 goto FREELAS
+if %opc% equ 8 goto UPWORK
+if %opc% equ 9 goto IEL
+if %opc% equ 10 goto VAGAS
+if %opc% equ 11 goto BAHIAESTAGIO
+if %opc% equ 12 goto BNE
+if %opc% equ 13 goto COELBA
 
-if %opc% gtr "13" start errornum.bat && timeout 3 && start jobs.bat
-if %opc% lss "1" start errornum.bat && timeout 3 && start jobs.bat
+if %opc% gtr 13 start errornum.bat && timeout 3 && start jobs.bat
+if %opc% lss 1 start errornum.bat && timeout 3 && start jobs.bat
 
 __________________________________________
 
@@ -180,8 +183,8 @@ cls
 echo.
 echo    CREDENCIAIS
 echo.
-echo    email : edzzon2@gmail.com 
-echo    senha : 34012348a@!
+echo    email : %Eedz%
+echo    senha : %Snls%
 echo    palavra-chave : calhambeque
 echo.
 pause
@@ -197,7 +200,7 @@ echo.
 echo    CREDENCIAIS
 echo.
 echo    cpf   : 859.321.455-01
-echo    senha : 34012348
+echo    senha : %Sn%
 echo.
 pause
 goto P2
@@ -244,7 +247,7 @@ echo.
 echo    CREDENCIAIS
 echo.
 echo    email : %Ecld%
-echo    senha : 34012348@!
+echo    senha : %Sns%
 echo.
 pause
 goto P2
@@ -259,7 +262,7 @@ echo.
 echo    CREDENCIAIS
 echo.
 echo    email : %Eedz%
-echo    senha : 34012348@!a
+echo    senha : %Snsl%
 echo.
 pause
 goto P2
@@ -281,6 +284,6 @@ echo.
 set /p opc=.   Insira um valor : 
 cls 
   
-if "%opc%" == "1" start index.bat && exit
-if "%opc%" == "2" goto INICIO
-if "%opc%" == "3" exit
+if %opc% equ 1 start index.bat && exit
+if %opc% equ 2 goto INICIO
+if %opc% equ 3 exit
