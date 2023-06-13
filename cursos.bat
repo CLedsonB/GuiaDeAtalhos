@@ -1,8 +1,19 @@
 @echo off
 echo --- CONFIGs INICIAIS --- 
-if "%1" neq "" goto %1
 chcp 65001
 title Atalhos de Cursos
+
+set Ecld = %1
+set Eedz = %2
+set Eifba = %3
+set Sn = %4
+set Sns = %5
+set Snsl = %6
+set Snls = %7
+set Sifba = %8
+set Sm = %9
+set SM = %10
+
 goto INICIO 
   
 __________________________________________
@@ -28,10 +39,10 @@ set /p opc=.	Insira um valor :
 mode con:cols=50 lines=15 
 cls
 
-if %opc% == 1 goto COURSERA
-if %opc% == 2 goto EBAC
-if %opc% == 3 goto FCC
-if %opc% == 4 goto FEM
+if %opc% equ 1 goto COURSERA
+if %opc% equ 2 goto EBAC
+if %opc% equ 3 goto FCC
+if %opc% equ 4 goto FEM
 
 if %opc% gtr 4 start errornum.bat && timeout 3 && start cursos.bat
 if %opc% lss 1 start errornum.bat && timeout 3 && start cursos.bat
