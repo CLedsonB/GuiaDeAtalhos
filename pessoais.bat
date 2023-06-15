@@ -2,7 +2,7 @@
 echo --- CONFIGs INICIAIS --- 
 chcp 65001
 title Atalhos Pessoais
-setlocal
+
 set Ecld = %1
 set Eedz = %2
 set Eifba = %3
@@ -19,40 +19,33 @@ goto INICIO
 __________________________________________
 
 :INICIO 
-mode con:cols=50 lines=30 
-color 02 
+mode con cols=50 lines=30 
+color 09
 cls 
 echo.
-echo.           --- SITES ( PESSOAIS ) --- 
+echo           --- SITES ( PESSOAIS ) --- 
 echo. 
-echo.    Digite um dos valores abaixo :  
 echo. 
-echo.    (0) Abrir (1, 2, 3, 4)
+echo. 
+echo    Escolha um dos valores abaixo :  
+echo. 
 echo.    (1) Google Classroom 
 echo.    (2) Mega
 echo.    (3) Github 
 echo.    (4) Chat GPT 
 echo.    (5) Zty.pe (JOGO) 
-echo. 
-set /p opc=.    Insira um valor : 
+echo.
+echo.    (6) Voltar ao Guia de Atalhos
+echo.
+choice /c 123456 /n /m "--- Digite aqui : "
+cls
 
-mode con:cols=50 lines=15
-cls 
-  
-if %opc% equ 0 goto PACK1 
-if %opc% equ 1 goto GCLASS 
-if %opc% equ 2 goto MEGA 
-if %opc% equ 3 goto GITHUB 
-if %opc% equ 4 goto GPT
-if %opc% equ 5 goto ZTYPE
-
-if %opc% gtr 5 start errornum.bat && timeout 3 && start pessoais.bat
-if %opc% lss 1 start errornum.bat && timeout 3 && start pessoais.bat
-
-__________________________________________
-  
-:PACK1
-exit 
+if errorlevel 6 mode con:cols=50 lines=15 && call index.bat && exit
+if errorlevel 5 mode con:cols=50 lines=15 && call :ZTYPE
+if errorlevel 4 mode con:cols=50 lines=15 && call :GPT
+if errorlevel 3 mode con:cols=50 lines=15 && call :GITHUB
+if errorlevel 2 mode con:cols=50 lines=15 && call :MEGA
+if errorlevel 1 mode con:cols=50 lines=15 && call :GCLASS
 
 __________________________________________
 
@@ -132,16 +125,15 @@ mode con:cols=50 lines=10
 cls 
 echo. 
 echo. 
-echo.        Escolha uma das opções a seguir :
+echo.   Escolha uma das opções a seguir :
 echo.
-echo.     1 - Voltar ao Guia de Atalhos
-echo.     2 - Voltar ao Atalhos Pessoais
-echo.     3 - Encerrar seção
+echo.     (1) Voltar ao Guia de Atalhos
+echo.     (2) Voltar ao Atalhos YouTube 
+echo.     (3) Encerrar seção
 echo.
+choice /c 123 /n /m "--- Digite aqui : " 
+cls
 
-set /p opc=.   Insira um valor : 
-cls 
-  
-if %opc% equ 1 start index.bat && exit
-if %opc% equ 2 goto INICIO
-if %opc% equ 3 exit
+if errorlevel 3 exit
+if errorlevel 2 goto INICIO
+if errorlevel 1 start index.bat && exit
