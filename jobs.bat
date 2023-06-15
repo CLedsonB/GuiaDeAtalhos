@@ -20,7 +20,7 @@ __________________________________________
 
 :INICIO
 mode con:cols=50 lines=30
-color 02
+color 0e
 cls
 echo.
 echo         --- SITES ( ESTÁGIOS - JOBS ) ---
@@ -29,21 +29,25 @@ echo.
 echo.
 echo         Digite um dos valores abaixo:
 echo.
-echo        1 - INFOJOBS
-echo        2 - INDEED
-echo        3 - GLASSDOOR
-echo        4 - LINKEDIN
-echo        5 - NUBE
-echo        6 - OLX
-echo        7 - 99FREELAS
-echo        8 - UPWORK
-echo        9 - IEL
-echo        10 - VAGAS
-echo        11 - BAHIAESTAGIO
-echo        12 - BNE
-echo        13 - COELBA
+echo        (01) INFOJOBS
+echo        (02) INDEED
+echo        (03) GLASSDOOR
+echo        (04) LINKEDIN
+echo        (05) NUBE
+echo        (06) OLX
+echo        (07) 99FREELAS
+echo        (08) UPWORK
+echo        (09) IEL
+echo        (10) VAGAS
+echo        (11) BAHIAESTAGIO
+echo        (12) BNE
+echo        (13) COELBA
+echo        (14) HOTMART
+echo        (15) DID
 echo.
-set /p opc=.	Insira um valor : 
+echo.       (00) Voltar ao Guia de Atalhos
+echo.
+set /p opc=. --- Digite e presssione [ENTER] :
 
 mode con:cols=50 lines=15
 cls
@@ -61,9 +65,12 @@ if %opc% equ 10 goto VAGAS
 if %opc% equ 11 goto BAHIAESTAGIO
 if %opc% equ 12 goto BNE
 if %opc% equ 13 goto COELBA
+if %opc% equ 14 goto HOTMART
+if %opc% equ 15 goto DID
+if %opc% equ 0 start index.bat && exit
 
-if %opc% gtr 13 start errornum.bat && timeout 3 && start jobs.bat
-if %opc% lss 1 start errornum.bat && timeout 3 && start jobs.bat
+if %opc% gtr 16 start errornum.bat && timeout 3 && start jobs.bat
+if %opc% lss 0 start errornum.bat && timeout 3 && start jobs.bat
 
 __________________________________________
 
@@ -269,21 +276,51 @@ goto P2
 
 __________________________________________
 
+:HOTMART
+color 5F
+start chrome --incognito "https://sso.hotmart.com/login"
+cls
+echo.
+echo    CREDENCIAIS
+echo.
+echo    email : %Eedz%
+echo    senha : %Snls%
+echo.
+pause
+goto P2
+
+__________________________________________
+
+:DID
+color F0
+start chrome --incognito ""
+cls
+echo.
+echo    CREDENCIAIS
+echo.
+echo    email : %Eedz%
+echo    senha : %Snls%
+echo.
+pause
+goto P2
+
+__________________________________________
+
+
 :P2 
 mode con:cols=50 lines=10 
 cls 
 echo. 
 echo. 
-echo.        Escolha uma das opções a seguir :
+echo.   Escolha uma das opções a seguir :
 echo.
-echo.     1 - Voltar ao Guia de Atalhos
-echo.     2 - Voltar ao Atalhos Jobs
-echo.     3 - Encerrar sessão
+echo.     (1) Voltar ao Guia de Atalhos
+echo.     (2) Voltar ao Atalhos YouTube 
+echo.     (3) Encerrar seção
 echo.
+choice /c 123 /n /m "--- Digite aqui : " 
+cls
 
-set /p opc=.   Insira um valor : 
-cls 
-  
-if %opc% equ 1 start index.bat && exit
-if %opc% equ 2 goto INICIO
-if %opc% equ 3 exit
+if errorlevel 3 exit
+if errorlevel 2 goto INICIO
+if errorlevel 1 start index.bat && exit
