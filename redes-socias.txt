@@ -10,17 +10,6 @@ https://br.linkedin.com/in/cledson-borges-dos-santos-5a11201b1
 blog
 https://cledsonb.github.io/
 
-CEP
-41515-124
-3° Travessa Duque de Caxias - Bairro da Paz
-
-
-:GUPY
-link : "https://login.gupy.io/"
-email : "cledsonborgesdossantos@gmail.com"
-senha : "34012348a@!"
-
-
 
 
 
