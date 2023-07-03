@@ -33,6 +33,7 @@ echo.        (1) COURSERA
 echo.        (2) EBAC
 echo.        (3) FREE CODE CAMP
 echo.        (4) FRONTEND MENTOR
+echo.        (5) QUALIFACTI
 echo.
 echo.        (0) Voltar ao Guia de Atalhos
 echo. 
@@ -45,9 +46,10 @@ if %opc% equ 1 goto COURSERA
 if %opc% equ 2 goto EBAC
 if %opc% equ 3 goto FCC
 if %opc% equ 4 goto FEM
+if %opc% equ 5 goto QUALI
 if %opc% equ 0 start index.bat && exit
 
-if %opc% gtr 4 start errornum.bat && timeout 3 && start cursos.bat
+if %opc% gtr 5 start errornum.bat && timeout 3 && start cursos.bat
 if %opc% lss 0 start errornum.bat && timeout 3 && start cursos.bat
 
 __________________________________________
@@ -114,6 +116,13 @@ echo.
 echo.   obs: Lembrar senha
 echo.
 pause
+goto P2
+
+__________________________________________
+
+:QUALI
+start chrome --incognito "https://qualifacti.facti.com.br/"
+cls
 goto P2
 
 __________________________________________
