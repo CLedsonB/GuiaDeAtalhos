@@ -36,14 +36,16 @@ echo.    (3) Github
 echo.    (4) Chat GPT 
 echo.    (5) Zty.pe (JOGO) 
 echo.    (6) Podbean 
+echo.    (7) Blip
 echo.
-echo.    (7) Voltar ao Guia de Atalhos
+echo.    (8) Voltar ao Guia de Atalhos
 echo.
-choice /c 1234567 /n /m "--- Digite aqui : "
+choice /c 12345678 /n /m "--- Digite aqui : "
 cls
 
 
-if errorlevel 7 mode con:cols=50 lines=15 && call index.bat && exit
+if errorlevel 8 mode con:cols=50 lines=15 && call index.bat && exit
+if errorlevel 7 mode con:cols=50 lines=15 && call :BLIP
 if errorlevel 6 mode con:cols=50 lines=15 && call :PODBEAN
 if errorlevel 5 mode con:cols=50 lines=15 && call :ZTYPE
 if errorlevel 4 mode con:cols=50 lines=15 && call :GPT
@@ -136,7 +138,20 @@ echo.    senha : %SnlsS%
 echo.
 pause
 goto P2 
+__________________________________________
 
+:BLIP
+color 7A
+start chrome --incognito "https://account.blip.ai/login?ReturnUrl=%2Faccount" 
+cls
+echo.
+echo.    CREDENCIAIS
+echo.
+echo.    email : %Eedz%
+echo.    senha : %SnlsS%
+echo.
+pause
+goto P2 
 __________________________________________
 
 :P2 
